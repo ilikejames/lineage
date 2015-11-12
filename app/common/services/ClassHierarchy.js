@@ -1,7 +1,7 @@
 /**
- * [ClassHierachy description]
+ * [ClassHierarchy description]
  */
-export default function ClassHierachy() {
+export default function ClassHierarchy() {
 
 	var cache = new WeakMap();
 
@@ -12,7 +12,7 @@ export default function ClassHierachy() {
 
 		for(var prop in obj) {
 
-			var id = parentId + '.' + prop;
+			var id = prop + '.' + parentId;
 
 			if(!memo[prop]) {
 				memo[prop] = [];
@@ -29,7 +29,6 @@ export default function ClassHierachy() {
 	}
 
 	this.find = function(name, rootClass=window, rootName='window') {
-		var t0 = performance.now();
 
 		var hierarchy = cache.get({ id : rootName });
 		if(!hierarchy) {
@@ -37,11 +36,8 @@ export default function ClassHierachy() {
 			cache.set({ id : rootName }, hierarchy);
 		}
 
-		console.log('t1', performance.now()-t0);
-		console.log(hierarchy);
-
-		var elements = hierarchy[name] || [];
-		var namespaces = elements.map((itm) => itm.split('.').reverse().join('.'));
+		var namespaces = hierarchy[name] || [];
+		//var namespaces = elements.map((itm) => itm.split('.').reverse().join('.'));
 		
 		var result = namespaces.reduce(function(memo, itm) {
 
@@ -78,7 +74,6 @@ export default function ClassHierachy() {
 		return result;
 
 	};
-
 
 
 }
