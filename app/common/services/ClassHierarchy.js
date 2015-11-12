@@ -37,8 +37,7 @@ export default function ClassHierarchy() {
 		}
 
 		var namespaces = hierarchy[name] || [];
-		//var namespaces = elements.map((itm) => itm.split('.').reverse().join('.'));
-		
+
 		var result = namespaces.reduce(function(memo, itm) {
 
 			var parts = itm.split('.');
@@ -46,23 +45,22 @@ export default function ClassHierarchy() {
 
 			for(var part in parts) {
 
-				var key = parts[part],
-					id = parts.slice(part).join('.');
+				var key = parts[part];
 
 				if(!o.children) {
 					o.children = [];
 				}
 
-				var found = o.children.find((itm) => itm.name==key);
+				var existing = o.children.find((itm) => itm.name==key);
 
-				if(!found) {
+				if(!existing) {
 					o.children.push({
-						name : key //, id : id
+						name : key
 					});
 					o = o.children[o.children.length-1];
 				}
 				else {
-					o = found;
+					o = existing;
 				}
 			}
 

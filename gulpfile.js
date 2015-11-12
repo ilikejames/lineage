@@ -141,9 +141,7 @@ function swallowError(err) {
 gulp.task('watch', function() {
 	gulp.watch('./assets/sass/**/*.scss', ['sass']).on('error', swallowError);
 	gulp.watch('./app/**/*.htm', ['ngtemplates', ['js']]).on('error', swallowError);
-	gulp.watch('./app/**/*.js', ['jshint', 'js', ['js_minimize']]).on('error', swallowError);
-
-	//runsequence(['sass', 'ngtemplates'], 'jshint', 'js');
+	gulp.watch('./app/**/*.js', ['jshint', 'js']).on('error', swallowError);
 });
 
 
