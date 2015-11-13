@@ -19,7 +19,7 @@ export default function ClassProperySearchDirective(ClassHierarchyService) {
 		
 		templateUrl : 'components/classPropertySearch/template.htm',
 
-		controller : controller,
+		controller : ['$scope', 'ClassHierarchyService', controller],
 
 		controllerAs : 'classPropertySearch'
 

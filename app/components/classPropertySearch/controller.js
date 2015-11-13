@@ -15,4 +15,4 @@ export default function ClassProperySearchController($scope, ClassHierarchyServi
 	$scope.$watch(() => this.property, function (newval) {
 		self.hierarchy = ClassHierarchyService.find(newval, angular, 'angular');
 	});
-}
+};

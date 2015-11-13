@@ -92,7 +92,9 @@ gulp.task('js_minimize', function() {
 	return gulp.src([
 		'./build/app.js'
 	])
-	.pipe(uglify())
+	.pipe(uglify({
+		'no-dead-code' : true
+	}))
     .on('error', gutil.log)
     .pipe(rename('app.min.js'))
     .pipe(gulp.dest('./build/'));
