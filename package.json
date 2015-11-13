@@ -5,7 +5,7 @@
 
 	"author": "james mountain <james.mountain@gmail.com>",
 
-	"description": "route map.",
+	"description": "Lineage example. ",
 
 	"engines" :{
 		"node" : "0.12.x",
@@ -46,6 +46,7 @@
 		"karma-webpack" : "1.7.0",
 		"karma-babel-preprocessor" : "x",
 		"karma-browserify" : "x",
+		"karma-jasmine-matchers" : "x",
 		"babel-polyfill" : "x",
 		"browserify-shim" : "x",
 		"babel-preset-es2015" : "x",

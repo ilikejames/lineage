@@ -1,15 +1,15 @@
 
-import ClassHierarchy from './ClassHierarchy.js';
+import ClassHierarchyService from './ClassHierarchyService.js';
 
 
 (function() {
 	
-	describe('ClassHierarchy', function() {
+	describe('ClassHierarchyService', function() {
 
-		var classHierarchy;
+		var classHierarchyService;
 
 		beforeEach(inject(function() {
-			classHierarchy = new ClassHierarchy();
+			classHierarchyService = new ClassHierarchyService();
 		}));
 
 
@@ -28,7 +28,7 @@ import ClassHierarchy from './ClassHierarchy.js';
 				b : { prop1 : {} }
 			};
 
-			var found = classHierarchy.find('prop1',  data, 'object');
+			var found = classHierarchyService.find('prop1',  data, 'object');
 
 			/*
 			prop1.a1.a

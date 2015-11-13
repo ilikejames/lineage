@@ -1,11 +1,11 @@
 /**
- * [ClassHierarchy description]
+ * [ClassHierarchyService description]
  */
-export default function ClassHierarchy() {
+export default function ClassHierarchyService() {
 
 	var cache = new WeakMap();
 
-	function buildPath(parentId, obj, depth=0, maxDepth=4, memo={}) {
+	function buildPath(parentId, obj, depth=0, maxDepth=6, memo={}) {
 
 		if(['object', 'function'].indexOf(typeof obj)==-1) return memo;
 		if(depth>maxDepth) return memo;
@@ -38,6 +38,7 @@ export default function ClassHierarchy() {
 
 		var namespaces = hierarchy[name] || [];
 
+
 		var result = namespaces.reduce(function(memo, itm) {
 
 			var parts = itm.split('.');
@@ -52,6 +53,7 @@ export default function ClassHierarchy() {
 				}
 
 				var existing = o.children.find((itm) => itm.name==key);
+				//var uid = parts.slice(part).join('.');
 
 				if(!existing) {
 					o.children.push({

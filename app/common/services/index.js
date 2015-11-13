@@ -1,7 +1,7 @@
 
 import angular from 'angular';
 
-import ClassHierarchy from './ClassHierarchy.js';
+import ClassHierarchyService from './ClassHierarchyService.js';
 
 (function() {
 
@@ -9,7 +9,7 @@ import ClassHierarchy from './ClassHierarchy.js';
 
 	angular.module('common.services', [])
 
-	.service('ClassHierarchy', [ ClassHierarchy ]);
+	.service('ClassHierarchyService', [ ClassHierarchyService ]);
 
 })();
 

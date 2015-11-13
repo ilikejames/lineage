@@ -119,7 +119,7 @@ gulp.task('sass', function () {
 	var sass = require('gulp-sass'),
 		minifyCss = require('gulp-minify-css');
 
-	gulp.src('./assets/sass/**/*.scss')
+	gulp.src(['./assets/sass/**/*.scss', './app/**/*.scss'])
 	.pipe(sourcemaps.init())
 	.pipe(sass().on('error', sass.logError))
 	.pipe(sourcemaps.write())
@@ -139,7 +139,7 @@ function swallowError(err) {
 
 
 gulp.task('watch', function() {
-	gulp.watch('./assets/sass/**/*.scss', ['sass']).on('error', swallowError);
+	gulp.watch(['./assets/sass/**/*.scss', './app/**/*.scss'], ['sass']).on('error', swallowError);
 	gulp.watch('./app/**/*.htm', ['ngtemplates', ['js']]).on('error', swallowError);
 	gulp.watch('./app/**/*.js', ['jshint', 'js']).on('error', swallowError);
 });

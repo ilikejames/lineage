@@ -13,17 +13,19 @@ import 'components';
 
 	.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function($locationProvider, $stateProvider, $urlRouterProvider) {
 		
-		$locationProvider.html5Mode(true);
-
-		$urlRouterProvider.otherwise("/index.htm");
+		$urlRouterProvider.otherwise("/$$ChildScope");
 
 		$stateProvider
 		.state('home', {
-			url: '/index.htm',
-			templateUrl: 'areas/home.htm',
-			controllerAs : 'homeCntrl',
-			controller : function() { }
-		});
+			url: '/',
+			template : '<class-property-search property="$$ChildScope">'
+		})
+		.state('search', {
+			url : '/:search', 
+			template : function(params) {
+				return `<class-property-search property="${params.search}">`;
+			}
+		})
 
 	}]);
 

@@ -1,0 +1,24 @@
+
+lineage-map {
+
+	display:block;
+	box-sizing:border-box;
+	border:solid 8px black;
+	background: #eee;
+
+	.node circle {
+	  fill: #fff;
+	  stroke: #333;
+	  stroke-width: 1.5px;
+	}
+
+	.node text {
+	  font-size: 11px;
+	}
+
+	path.link {
+	  fill: none;
+	  stroke: #333;
+	  stroke-width: 1.5px;
+	}
+}

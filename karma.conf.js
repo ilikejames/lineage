@@ -17,7 +17,8 @@ module.exports = function(config) {
         'karma-babel-preprocessor',
         'karma-browserify',
         'karma-chrome-launcher',
-        'karma-ng-html2js-preprocessor'
+        'karma-ng-html2js-preprocessor',
+        'karma-jasmine-matchers'
     ],
 
     // list of files / patterns to load in the browser
