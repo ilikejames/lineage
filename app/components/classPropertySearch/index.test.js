@@ -15,7 +15,7 @@
 		beforeEach(inject(function(_$compile_, _$rootScope_, _ClassHierarchyService_){
 			$compile = _$compile_;
 			$rootScope = _$rootScope_;
-			classHierarchyService = _ClassHierarchyService_
+			classHierarchyService = _ClassHierarchyService_;
 		}));
 
 

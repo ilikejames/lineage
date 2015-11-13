@@ -25,7 +25,7 @@ import 'components';
 			template : function(params) {
 				return `<class-property-search property="${params.search}">`;
 			}
-		})
+		});
 
 	}]);
 

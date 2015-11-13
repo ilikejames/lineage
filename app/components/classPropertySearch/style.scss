@@ -2,16 +2,30 @@
 
 class-property-search {
 
+	display: block;
+	box-sizing: border-box;
+	margin-top: 2rem;
+	border-width:0;
+	border:solid 15px black;
+	padding:2rem;
+	background:#fff;
+
 	.search {
 
-		margin: 2rem 0;
+		margin: 2rem auto;
+		text-align: center;
 
 		input {
-			border: solid 2px silver;
+			border-width: 0;
+			border-bottom: solid 3px #000;
+			background: #fff;
+			width:30rem;
 			outline : none;
-			display:inline-block; 
-			
+			display:inline-block;
+			padding:0.2rem;		
 			font-size:2rem;
+			margin-bottom: 1rem;
+			text-align: center;
 		}
 	}
 }
