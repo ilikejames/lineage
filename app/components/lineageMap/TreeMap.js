@@ -69,7 +69,7 @@ export default function TreeMap(element, data) {
 		    .style("fill", (d) => d.depth>0 && d.children ? '#eee' : '#333'); 
 
 		nodeEnter.append("svg:text")
-			.attr("dy", (d) => d.depth===0 ? "0.2rem" : "-1.5em")
+			.attr("dy", (d) => d.depth===0 ? "0.2rem" : "-0.7rem")
 			.attr("dx", (d) => d.depth===0 ? "-1em" : "0")
 			.attr("text-anchor", (d) => d.depth===0 ? 'end' : 'middle')
 			.text((d) => d.name);
