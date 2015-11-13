@@ -78,7 +78,7 @@ export default function TreeMap(element, data) {
 
 		var nodeUpdate = node.transition()
 			.duration(duration)
-			.attr("transform", (d) => "translate(" + d.y + "," + d.x + ")")
+			.attr("transform", (d) => "translate(" +(d.y | 0) + "," + d.x + ")")
 			.select("circle").attr("r", 6).style("fill-opacity", 1)
 			.select("text")
 			.style("fill-opacity", 1);
